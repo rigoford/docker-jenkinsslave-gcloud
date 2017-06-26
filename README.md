@@ -14,9 +14,7 @@ To create a basic Jenkins slave instance use:
 
 ```
 docker run \
-    --volume /etc/localtime:/etc/localtime:ro \
     --detach \
-    --name jenkins_gcloud \
     --env JENKINS_MASTER=<JENKINS_MASTER_ADDRESS> \
     --env JENKINS_USERNAME=<JENKINS_USERNAME> \
     --env JENKINS_PASSWORD=<JENKINS_PASSWORD> \
@@ -24,6 +22,8 @@ docker run \
     --env JENKINS_LABELS=gcloud \
     --env JENKINS_NAME=gcloud-slave \
     --env LANG=C.UTF-8 \
+    --name jenkins_gcloud \
+    --volume /etc/localtime:/etc/localtime:ro \
     docker-jenkinsslave-gcloud:alpha
 ```
 
