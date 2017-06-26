@@ -1,6 +1,6 @@
 # docker-jenkinsslave-gcloud
 
-Jenkins slave docker image with the Google CLoud SDK installed
+Jenkins slave docker image with the Google Cloud SDK installed
 
 ## Usage
 
