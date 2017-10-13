@@ -1,6 +1,9 @@
 # docker-jenkinsslave-gcloud
 
-Jenkins slave docker image with the Google Cloud SDK installed
+Jenkins slave docker image with the following software installed
+
+* Google Cloud SDK 159.0.0
+* Terraform 0.10.7
 
 ## Usage
 
