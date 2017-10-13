@@ -4,6 +4,7 @@ MAINTAINER Martin Ford <ford.j.martin@gmail.com>
 
 ENV GCLOUD_SDK_VERSION=159.0.0
 ENV GCLOUD_SDK_URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+ENV TERRAFORM_VERSION="0.10.7"
 ENV PATH="${PATH}:/opt/google-cloud-sdk/bin"
 
 RUN apk add --update \
@@ -19,6 +20,11 @@ RUN mkdir -p /opt && \
 
 RUN chown jenkins:jenkins -R /home/jenkins
 
+RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    chmod +x terraform && \
+    mv terraform /usr/bin/terraform && \
+    rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+
 USER jenkins
 WORKDIR /home/jenkins
-
