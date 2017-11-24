@@ -4,7 +4,7 @@ MAINTAINER Martin Ford <ford.j.martin@gmail.com>
 
 ENV GCLOUD_SDK_VERSION=159.0.0
 ENV GCLOUD_SDK_URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz
-ENV TERRAFORM_VERSION="0.10.7"
+ENV TERRAFORM_VERSION="0.11.0"
 ENV PATH="${PATH}:/opt/google-cloud-sdk/bin"
 
 RUN apk add --update \
