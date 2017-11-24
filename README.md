@@ -3,7 +3,7 @@
 Jenkins slave docker image with the following software installed
 
 * Google Cloud SDK 159.0.0
-* Terraform 0.10.7
+* Terraform 0.11.0
 
 ## Usage
 
