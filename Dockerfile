@@ -1,4 +1,4 @@
-FROM garethjevans/jenkinsslave:v1.2.3-alpine
+FROM garethjevans/jenkinsslave:v1.3-alpine
 
 MAINTAINER Martin Ford <ford.j.martin@gmail.com>
 
