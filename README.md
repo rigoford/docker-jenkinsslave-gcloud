@@ -1,19 +1,12 @@
 # docker-jenkinsslave-gcloud
 
-Jenkins slave docker image with the following software installed
+Jenkins Slave docker image, based off [garethjevans/jenkinsslave-alpine](https://hub.docker.com/r/garethjevans/jenkinsslave-alpine/), with [Google Cloud SDK](https://cloud.google.com/sdk/) and [Terraform](https://www.terraform.io/) installed
 
-* Google Cloud SDK 159.0.0
-* Terraform 0.11.0
+This is available on Docker hub as [garethjevans/jenkinsslave-gcloud](https://hub.docker.com/r/garethjevans/jenkinsslave-gcloud/)
 
 ## Usage
 
-Available on [Docker Hub](https://hub.docker.com/r/rigoford/docker-jenkinsslave-gcloud/):
-
-```
-docker pull rigoford/docker-jenkinsslave-gcloud:alpha
-```
-
-To create a basic Jenkins slave instance use:
+To create a basic Jenkins Google Cloud Slave instance use:
 
 ```
 docker run \
@@ -27,8 +20,7 @@ docker run \
     --env LANG=C.UTF-8 \
     --name jenkins_gcloud \
     --volume /etc/localtime:/etc/localtime:ro \
-    docker-jenkinsslave-gcloud:alpha
+    garethjevans/jenkinsslave-gcloud:latest
 ```
 
-Obviously you'll need an instance of Jenkins master running, I can recommend
-[garethjevans/jenkins](https://hub.docker.com/r/garethjevans/jenkins).
+Obviously, you'll need an instance of Jenkins Master as well, try [garethjevans/jenkins](https://hub.docker.com/r/garethjevans/jenkins/).
