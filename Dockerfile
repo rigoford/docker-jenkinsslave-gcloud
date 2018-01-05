@@ -9,6 +9,7 @@ ENV PATH="${PATH}:/opt/google-cloud-sdk/bin"
 
 RUN apk add --update \
       curl \
+      jq \
       python \
       python-dev && \
     rm -rf /var/cache/apk/*
